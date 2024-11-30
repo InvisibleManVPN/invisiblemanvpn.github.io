@@ -9,11 +9,6 @@ minify:
   disableXML: true
   minifyOutput: true
 
-label:
-  text: "Home"
-  icon: /apple-touch-icon.png
-  iconHeight: 35
-
 params:
   profileMode:
     enabled: true
@@ -23,7 +18,6 @@ params:
     imageUrl: "./logo.svg"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
     buttons:
       - name: Download x64
         url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x64.zip"
