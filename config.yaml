@@ -46,7 +46,21 @@ menu:
       name: Products
       url: /products/
       weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
-      weight: 10
+      weight: 30
+    - identifier: donation
+      name: Donation
+      url: /donation/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
