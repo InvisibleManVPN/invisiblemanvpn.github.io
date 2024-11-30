@@ -1,7 +1,6 @@
 ---
 author: ["Invisible Man"]
 title: "Donation"
-date: "2024-11-30"
 description: "Support and sustain my activities"
 ShowToc: false
 ---
