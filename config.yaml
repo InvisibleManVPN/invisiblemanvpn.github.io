@@ -1,6 +1,7 @@
 baseURL: https://invisiblemanvpn.github.io
 languageCode: en-us
 title: Invisible Man
+favicon: static/favicon.ico
 theme: PaperMod
 
 enableRobotsTXT: true
