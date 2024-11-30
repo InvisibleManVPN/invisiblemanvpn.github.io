@@ -38,25 +38,25 @@ params:
     - name: email
       url: "mailto:invisiblemanvpn@gmail.com"
     - name: donation
-      url: "mailto:invisiblemanvpn@gmail.com"
+      url: /donation
 
 menu:
   main:
     - identifier: products
       name: Products
-      url: /products/
+      url: /products
       weight: 10
     - identifier: search
       name: Search
-      url: /search/
+      url: /search
       weight: 20
     - identifier: tags
       name: Tags
-      url: /tags/
+      url: /tags
       weight: 30
     - identifier: donation
       name: Donation
-      url: /donation/
+      url: /donation
       weight: 40
 
 outputs:
