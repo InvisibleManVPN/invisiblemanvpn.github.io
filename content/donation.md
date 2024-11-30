@@ -1,5 +1,4 @@
 ---
-author: ["Invisible Man"]
 title: "Donation"
 description: "Support and sustain my activities"
 ShowToc: false
