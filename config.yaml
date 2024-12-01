@@ -1,0 +1,61 @@
+baseURL: https://invisiblemanvpn.github.io
+languageCode: en-us
+title: Invisible Man
+favicon: static/favicon.ico
+theme: PaperMod
+
+enableRobotsTXT: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  profileMode:
+    enabled: true
+    title: Invisible Man XRay
+    subtitle: "A free, open-source and easy-to-use windows client that supports xray core. It provides a simple interface to configure and manage proxies and allows users to switch between different server locations."
+    postscript: "Last updated on 10/23/2024 | v2.6.3"
+    imageUrl: "./logo.svg"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Download x64
+        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x64.zip"
+      - name: Download x86
+        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x86.zip"
+    
+  socialIcons:
+    - name: github
+      url: "https://github.com/invisiblemanvpn"
+    - name: telegram
+      url: "https://t.me/invisiblemanvpn"
+    - name: email
+      url: "mailto:invisiblemanvpn@gmail.com"
+    - name: donation
+      url: /donation
+
+menu:
+  main:
+    - identifier: products
+      name: Products
+      url: /products
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 30
+    - identifier: donation
+      name: Donation
+      url: /donation
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
