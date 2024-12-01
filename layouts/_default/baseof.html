@@ -6,6 +6,11 @@
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
 <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    
+    {{ $feedback := resources.Get "js/feedback.js" | resources.Minify | resources.Fingerprint }}
+    <script type="text/javascript" src="{{ $feedback.Permalink }}"></script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,6 +46,49 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+    <!-- Feedback Section -->
+    <a id="feedback-button" aria-label="feedback" title="Send your Feedback" class="top-link button-feedback">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="padding: 10%;">
+            <path d="M19.91,16.51A8.45,8.45,0,0,0,22,11c0-5-4.49-9-10-9S2,6,2,11s4.49,9,10,9a10.9,10.9,0,0,0,3-.41l4.59,2.3A.91.91,0,0,0,20,22a1,1,0,0,0,.62-.22,1,1,0,0,0,.35-1Z"/>
+        </svg>
+    </a>
+
+    <div id="feedback-menu" class="feedback-menu">
+        <a id="feedback-close" class="feedback-close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M11.2929,3.29289 C11.6834,2.90237 12.3166,2.90237 12.7071,3.29289 C13.0976,3.68342 13.0976,4.31658 12.7071,4.70711 L9.41421,8 L12.7071,11.2929 C13.0976,11.6834 13.0976,12.3166 12.7071,12.7071 C12.3166,13.0976 11.6834,13.0976 11.2929,12.7071 L8,9.41421 L4.70711,12.7071 C4.31658,13.0976 3.68342,13.0976 3.29289,12.7071 C2.90237,12.3166 2.90237,11.6834 3.29289,11.2929 L6.58579,8 L3.29289,4.70711 C2.90237,4.31658 2.90237,3.68342 3.29289,3.29289 C3.68342,2.90237 4.31658,2.90237 4.70711,3.29289 L8,6.58579 L11.2929,3.29289 Z"/>
+            </svg>
+        </a>
+
+        <form action="https://formspree.io/invisiblemanvpn@gmail.com" method="POST">
+            <div class="feedback-row"  style="margin-top: 20px;">
+                <label class="feedback-label">Your Name</label>
+            </div>
+            <div class="feedback-row">
+                <input class="feedback-textbox" type="text" name="Name" placeholder="Let know your name..." maxlength="50" required>
+            </div>
+            <div class="feedback-row">
+                <label class="feedback-label">Your Email (Optional)</label>
+            </div>
+            <div class="feedback-row">
+                <input class="feedback-textbox" type="email" name="Email" placeholder="It's optional..." maxlength="50">
+            </div>
+            <div class="feedback-row">
+                <label class="feedback-label">Your Feedback</label>
+            </div>
+            <div class="feedback-row">
+                <textarea class="feedback-textarea" name="FeedBack" placeholder="Type something..." maxlength="800" required></textarea>
+            </div>
+            <div class="feedback-row">
+                <input class="feedback-button button" type="submit" value="Submit">
+            </div>
+
+            {{- $currentPage := . }}
+            <input type="hidden" name="_next" value="{{ $currentPage.Permalink }}" />
+        </form>
+    </div>
+    <!-- End Feedback Section -->
 </body>
 
 </html>

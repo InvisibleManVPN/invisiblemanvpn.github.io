@@ -1,3 +1,104 @@
 .profile-logo {
     display: inline-block;
 }
+
+.top-link {
+    bottom: 25px;
+    right: 90px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.button-feedback {
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    transform: none !important;
+    visibility: visible;
+    cursor: pointer;
+    background-color: var(--tertiary);
+}
+
+.feedback-menu {
+    bottom: -500px;
+    right: 10px;
+    z-index: 100;
+    position: fixed;
+    background-color: var(--theme);
+    float: right;
+    width: 350px;
+    height: 410px;
+    text-align: center;
+    border-radius: 7px;
+    overflow-y: auto;
+    max-height: calc(100vh - 70px);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.6));
+}
+
+.feedback-row {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    font-size:12pt;
+}
+
+.feedback-label {
+    float: left;
+    font-size: 12pt;
+    margin: 0px 0px 7px 25px;
+}
+
+.feedback-button {
+    width: 85%;
+    padding: 5px 10px;
+    color: var(--primary);
+}
+
+.feedback-close
+{
+    outline: 0;
+    top: 5px;
+    right: 5px;
+    margin: 2px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+input.feedback-textbox {
+    width: 85%;
+    outline: 0;
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    padding: 5px 15px;
+    text-align:left;
+    font-size:12pt;
+    text-decoration:none;
+}
+
+input.feedback-textbox:focus {
+    outline: none !important;
+    border:1px solid var(--primary);
+}
+
+textarea.feedback-textarea {
+    width: 85%;
+    height: 120px;
+    outline: 0;
+    color: var(--primary);
+    border: 1px solid var(--secondary);;
+    border-radius: 4px;
+    padding: 5px 15px;
+    text-align:left;
+    font-size:12pt;
+    text-decoration:none;
+    resize: none;
+}
+
+textarea.feedback-textarea:focus
+{
+    outline: none !important;
+    border:1px solid var(--primary);
+}
