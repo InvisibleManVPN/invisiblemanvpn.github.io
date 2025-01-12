@@ -25,6 +25,7 @@
     z-index: 100;
     position: fixed;
     background-color: var(--theme);
+    border: 2px solid var(--tertiary);
     float: right;
     width: 350px;
     height: 410px;
@@ -32,7 +33,7 @@
     border-radius: 7px;
     overflow-y: auto;
     max-height: calc(100vh - 70px);
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 .feedback-row {
@@ -54,8 +55,7 @@
     color: var(--primary);
 }
 
-.feedback-close
-{
+.feedback-close {
     outline: 0;
     top: 5px;
     right: 5px;
@@ -88,7 +88,7 @@ textarea.feedback-textarea {
     height: 120px;
     outline: 0;
     color: var(--primary);
-    border: 1px solid var(--secondary);;
+    border: 1px solid var(--secondary);
     border-radius: 4px;
     padding: 5px 15px;
     text-align:left;
@@ -97,8 +97,83 @@ textarea.feedback-textarea {
     resize: none;
 }
 
-textarea.feedback-textarea:focus
-{
+textarea.feedback-textarea:focus {
     outline: none !important;
     border:1px solid var(--primary);
+}
+
+div.config-hub-cards-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+div.config-hub-card {
+    width: 379px;
+    height: 250px;
+    background-color: var(--theme);
+    border: 2px solid var(--tertiary);
+    border-radius: 10px;
+    padding: 10px 15px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+p.config-hub-title {
+    font-weight: bold;
+    margin: 0px;
+}
+
+p.config-hub-description {
+    height: 100px;
+    margin: 5px 0px;
+    font-size: 12pt;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.config-hub-tags {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+
+p.config-hub-tag {
+    width: fit-content;
+    background-color: var(--secondary);
+    padding: 2px 15px;
+    margin: 0px;
+    border-radius: 25px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+img.config-hub-flag {
+    position: absolute;
+    margin: 0px;
+    height: 40px;
+    top: -7px;
+    right: 0px;
+}
+
+input.config-hub-button {
+    width: 100%;
+    margin: 15px auto;
+    padding: 5px 10px;
+    color: var(--primary);
+}
+
+p.config-hub-status-text {
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 840px) {
+    div.config-hub-cards-container {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
 }
