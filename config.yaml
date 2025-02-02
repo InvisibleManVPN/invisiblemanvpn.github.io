@@ -15,15 +15,15 @@ params:
     enabled: true
     title: Invisible Man XRay
     subtitle: "A free, open-source and easy-to-use windows client that supports xray core. It provides a simple interface to configure and manage proxies and allows users to switch between different server locations."
-    postscript: "Last updated on 10/23/2024 | v2.6.3"
+    postscript: "Last updated on 02/02/2025 | v3.2.5"
     imageUrl: "./logo.svg"
     imageWidth: 120
     imageHeight: 120
     buttons:
       - name: Download x64
-        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x64.zip"
+        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v3.2.5/InvisibleManXRay-x64.zip"
       - name: Download x86
-        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x86.zip"
+        url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v3.2.5/InvisibleManXRay-x86.zip"
     
   socialIcons:
     - name: github
