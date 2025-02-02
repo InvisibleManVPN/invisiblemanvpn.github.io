@@ -6,7 +6,7 @@ ShowToc: false
 
 Explore a variety of config providers. Compare options, choose the best fit for your needs, and get redirected to their platform to purchase or start using their services for the Invisible Man XRay effortlessly.
 
-Are you a provider? Click [here]() to learn how you can share your service on Config Hub.
+Are you a provider? Click [here](../provider-submission) to learn how you can share your service on Config Hub.
 
 {{< rawhtml >}}
     
@@ -59,7 +59,7 @@ Are you a provider? Click [here]() to learn how you can share your service on Co
                         <p class="config-hub-description">${provider.description}</p>
                         <div class="config-hub-tags">
                             ${fetchTagsForProvider(provider)}
-                            <img class="config-hub-flag" src="https://flagsapi.com/${provider.flag.toUpperCase()}/shiny/64.png"/>
+                            <img class="config-hub-flag" src="https://flagsapi.com/${provider.country.toUpperCase()}/shiny/64.png"/>
                         </div>
                         <form action="${provider.link}" target="_blank">
                             <input class="config-hub-button button" type="submit" value="Visit">

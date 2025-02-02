@@ -167,8 +167,38 @@ input.config-hub-button {
     color: var(--primary);
 }
 
+select.config-hub-select {
+    height: 37.59px;
+    color: var(--primary);
+    background-color: var(--theme);
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    padding: 5px 15px;
+    text-align:left;
+    font: inherit;
+    font-size:12pt;
+}
+
+select.config-hub-select:focus {
+    outline: none !important;
+    border:1px solid var(--primary);
+}
+
+select.config-hub-select:invalid {
+    color: gray;
+}
+
+option.config-hub-option {
+    color: var(--primary);
+}
+
 p.config-hub-status-text {
     color: var(--secondary);
+}
+
+.config-hub-field {
+    width: -webkit-fill-available !important;
+    margin: 10px 25px 0px 25px;
 }
 
 @media screen and (max-width: 840px) {
